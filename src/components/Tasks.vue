@@ -9,6 +9,7 @@
         v-for="(task, index) in tasks" :key="index"
       >
         <p class="text">{{ task.name }}</p>
+        <p class="text">{{ task.id }}</p>
         <p @click="toggleComplete(task)" class="text button">{{ task.completed ? 'completed' : 'not completed' }}</p>
         <p @click="deleteTask(task)" class="text button delete">Delete task</p>
       </li>
@@ -21,7 +22,6 @@ import ListTasks from '../queries/ListTasks'
 import CreateTask from '../mutations/CreateTask'
 import DeleteTask from '../mutations/DeleteTask'
 import UpdateTask from '../mutations/UpdateTask'
-import uuidV4 from 'uuid/v4'
 export default {
   name: 'Tasks',
   methods: {
@@ -88,7 +88,9 @@ export default {
         variables: task,
         update: (store, { data: { createTask } }) => {
           const data = store.readQuery({ query: ListTasks })
-          data.listTasks.items.push(createTask)
+          const index = data.listTasks.items.findIndex(item => item.id === createTask.id)
+          if (index == -1 ) { data.listTasks.items.push(createTask)  }
+          else {  data.listTasks.items[index] = createTask }
           store.writeQuery({ query: ListTasks, data })
         },
         optimisticResponse: {

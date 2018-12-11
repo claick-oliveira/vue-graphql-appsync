@@ -36,11 +36,11 @@ yarn || npm install
 ** Model Fields: **
 
  ```
-| Name      |  Type   | Required |
-| :-------- | :-----: | -------: |
-| id        |   ID    |      Yes |
-| name      | String  |      Yes |
-| completed | Boolean |      Yes |
+| Name      | Type    | Required |
+| --------- | ------- | -------- |
+| id        | ID      | Yes      |
+| name      | String  | Yes      |
+| completed | Boolean | Yes      |
 ```
 
 5. Create a file  `src/AppSync.js` using `src/AppSync.js.template` with the corresponding credentials
