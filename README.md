@@ -31,9 +31,9 @@ yarn || npm install
 [Video walkthrough](https://www.youtube.com/watch?v=0Xbt7VqkJNc) (replace Todo with Task, and fetchTodos with fetchTasks), or go to [AWS AppSync](https://aws.amazon.com/appsync/) if you already are familiar with how to create the correct schema.
 
 
-** ModelName: Task **
+**ModelName: Task**
 
-** Model Fields: **
+**Model Fields:**
 
  ```
 | Name      | Type    | Required |
