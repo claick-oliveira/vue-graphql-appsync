@@ -79,10 +79,8 @@ export default {
         return
       }
       this.taskname = ''
-      const id = uuidV4()
       const task = {
         name: taskname,
-        id,
         completed: false
       }
       this.$apollo.mutate({
