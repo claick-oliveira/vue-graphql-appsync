@@ -1,6 +1,6 @@
 export default {
   "graphqlEndpoint": "APPSYNC_ENDPOINT",
-  "region": "us-east-1",
+  "region": "AWS_REGION",
   "authenticationType": "API_KEY",
   "apiKey": "APPSYNC_KEY"
 }
