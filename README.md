@@ -44,3 +44,12 @@ yarn || npm install
 ```
 
 5. Create a file  `src/AppSync.js` using `src/AppSync.js.template` with the corresponding credentials
+
+
+6. Run
+
+```
+npm run dev
+```
+
+7. Open your browser http://localhost:8080
